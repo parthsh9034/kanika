@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Kanika ❤️</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOADING SCREEN -->
+<div id="loader">
+  <div class="loader-inner">
+    <div class="loader-heart">❤️</div>
+    <p class="loader-text">Preparing something special for you...</p>
+    <div class="loader-bar"><div class="loader-fill"></div></div>
+  </div>
+</div>
+
+<!-- CURSOR -->
+<div class="cursor"></div>
+<div class="cursor-follower"></div>
+
+<!-- FLOATING HEARTS CANVAS -->
+<canvas id="heartCanvas"></canvas>
+
+<!-- MUSIC PLAYER -->
+<div class="music-player">
+  <button class="music-btn" id="musicToggle" onclick="toggleMusic()">
+    <span class="music-icon">♪</span>
+    <span class="music-label">Play Music</span>
+  </button>
+  <!-- 
+    TO ADD MUSIC:
+    Place an mp3 file (e.g. song.mp3) in this folder and change the src below.
+    Recommended: "Tum Hi Ho", "Tera Ban Jaunga", or any song you both love.
+  -->
+  <audio id="bgMusic" loop>
+    <source src="song.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-sparkles" id="sparkleContainer"></div>
+  <div class="hero-content">
+    <div class="hero-tag" data-aos="fade-down">28 June 2026 ✨</div>
+    <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200">
+      <span class="hero-title-sub">Happy Birthday</span>
+      <span class="hero-title-main">Kanika</span>
+      <span class="hero-heart">❤️</span>
+    </h1>
+    <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="400">
+      From our first conversation to today...<br>
+      Every memory with you has become my favourite story.
+    </p>
+    <a href="#letter" class="hero-btn" data-aos="fade-up" data-aos-delay="600">
+      Begin Our Journey <span class="btn-arrow">↓</span>
+    </a>
+  </div>
+  <div class="hero-scroll-hint">scroll</div>
+</section>
+
+<!-- LETTER -->
+<section id="letter" class="section-pad">
+  <div class="container">
+    <div class="section-label" data-aos="fade-up">a letter for you</div>
+    <div class="letter-card" data-aos="fade-up" data-aos-delay="100">
+      <div class="letter-stamp">💌</div>
+      <div class="letter-lines">
+        <p class="letter-greeting">My Dearest Kanika,</p>
+        <!-- ✏️ PARTH — REPLACE THIS WITH YOUR OWN LETTER -->
+        <p>I still remember January 23rd, 2024 — the day you first said "Aree aap uth gyaa?" and somehow my whole world got a little brighter. I didn't know then that this one person would become my happiest habit, my safest place, my biggest reason to smile.</p>
+        <p>You walked into my life and without even trying, you fixed everything that was quietly broken. You made me want to be better. You made me believe I deserve good things. And then you became the best thing.</p>
+        <p>From music sessions at midnight to "good morning sweetheart" texts, from your "I love you more" to the way you say "meri jaan" — every single moment with you is a gift I don't take for granted.</p>
+        <p>Today, on your birthday, I want you to know: you are not just loved — you are adored, cherished, and chosen. Every single day, in every single way.</p>
+        <p>Happy Birthday, my love. You deserve the whole universe. 🌹</p>
+        <!-- ✏️ END OF PLACEHOLDER LETTER -->
+        <p class="letter-sign">Forever yours,<br><em>Parth</em> 💞</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="section-pad bg-alt">
+  <div class="container">
+    <div class="section-label" data-aos="fade-up">memories</div>
+    <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">Kanika's Gallery 🌸</h2>
+    <p class="section-sub" data-aos="fade-up" data-aos-delay="150">Every picture of her is a favourite.</p>
+    <!--
+      HOW TO ADD PHOTOS:
+      1. Copy your photo files into this folder (same place as index.html)
+         Name them: kanika1.jpg, kanika2.jpg, kanika3.jpg ... etc.
+      2. Open script.js and find the PHOTOS array at the top.
+         Add entries like: { src: 'kanika1.jpg', caption: 'My love', date: 'Jan 2024' }
+      3. The gallery will auto-populate with hover zoom + lightbox.
+    -->
+    <div class="gallery-grid" id="galleryGrid">
+      <!-- Populated by script.js from the PHOTOS array -->
+      <!-- Placeholders shown until photos are added -->
+      <div class="gallery-placeholder wide" data-aos="fade-up">
+        <div class="placeholder-icon">🌸</div>
+        <div class="ph-name">KANIKA — HERO PHOTO</div>
+        <div class="placeholder-text">Best / favourite photo</div>
+        <div class="placeholder-sub">Replace via PHOTOS array in script.js</div>
+      </div>
+      <div class="gallery-placeholder" data-aos="fade-up" data-aos-delay="0"><div class="placeholder-icon">✨</div><div class="ph-name">KANIKA</div><div class="placeholder-sub">Jan–Mar 2024</div></div>
+      <div class="gallery-placeholder" data-aos="fade-up" data-aos-delay="100"><div class="placeholder-icon">💕</div><div class="ph-name">KANIKA</div><div class="placeholder-sub">Apr 2024</div></div>
+      <div class="gallery-placeholder" data-aos="fade-up" data-aos-delay="200"><div class="placeholder-icon">🌹</div><div class="ph-name">KANIKA</div><div class="placeholder-sub">May 2024</div></div>
+      <div class="gallery-placeholder" data-aos="fade-up" data-aos-delay="300"><div class="placeholder-icon">🎂</div><div class="ph-name">KANIKA</div><div class="placeholder-sub">Birthday 28 Jun 2024</div></div>
+      <div class="gallery-placeholder" data-aos="fade-up" data-aos-delay="400"><div class="placeholder-icon">💖</div><div class="ph-name">KANIKA</div><div class="placeholder-sub">Late 2024</div></div>
+      <div class="gallery-placeholder" data-aos="fade-up" data-aos-delay="500"><div class="placeholder-icon">🌸</div><div class="ph-name">KANIKA</div><div class="placeholder-sub">2025</div></div>
+      <div class="gallery-placeholder" data-aos="fade-up" data-aos-delay="600"><div class="placeholder-icon">💝</div><div class="ph-name">KANIKA</div><div class="placeholder-sub">2026</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- KEY DATES -->
+<section id="keydates" class="section-pad">
+  <div class="container">
+    <div class="section-label" data-aos="fade-up">your story, moment by moment</div>
+    <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">Key Dates ❤️</h2>
+    <p class="section-sub" data-aos="fade-up" data-aos-delay="150">Every milestone. Every message. Every memory.</p>
+    <div class="kd-list">
+
+      <div class="kd-item" data-aos="fade-up">
+        <div class="kd-dot"></div><div class="kd-line"></div>
+        <div class="kd-card">
+          <div class="kd-top"><div class="kd-date">23 January 2024</div><div class="kd-badge">First Message</div></div>
+          <div class="kd-title">The Day It All Began ✨</div>
+          <div class="bubbles">
+            <div class="b-wrap"><div class="sender sender-p">Parth</div><span class="bubble bp">"Aree aap uth gyaa? Kaise ho"</span></div>
+            <div class="b-wrap"><div class="sender sender-k">Kanika</div><span class="bubble bk">"Okk 🙂"</span></div>
+          </div>
+          <div class="kd-note">One casual message. No idea it would become the beginning of everything.</div>
+        </div>
+      </div>
+
+      <div class="kd-item" data-aos="fade-up">
+        <div class="kd-dot gold"></div><div class="kd-line"></div>
+        <div class="kd-card gold-card">
+          <div class="kd-top"><div class="kd-date">8 February 2024</div><div class="kd-badge gold-badge">He Fell in Love 💘</div></div>
+          <div class="kd-title">The Day Parth Started Loving Her</div>
+          <div class="bubbles">
+            <div class="b-wrap right"><div class="sender sender-p">Parth</div><span class="bubble bp">"Tuu haii naa khusshh mere sathh??"</span></div>
+            <div class="b-wrap right"><div class="sender sender-p">Parth</div><span class="bubble bp">"Tuu pyarii to h bhott 🥺 tu naa jane jitna m tujhe janne laga"</span></div>
+            <div class="b-wrap"><div class="sender sender-k">Kanika</div><span class="bubble bk">"Kushh hun 💗"</span></div>
+          </div>
+          <div class="kd-note gold-note">This is the date he held in his heart for months. "8th of Feb 💞" — he remembered it so precisely he put it in his proposal.</div>
+        </div>
+      </div>
+
+      <div class="kd-item" data-aos="fade-up">
+        <div class="kd-dot"></div><div class="kd-line"></div>
+        <div class="kd-card">
+          <div class="kd-top"><div class="kd-date">14 February 2024</div><div class="kd-badge">Valentine's Day 💕</div></div>
+          <div class="kd-title">She Said It First That Day Too</div>
+          <div class="bubbles">
+            <div class="b-wrap"><div class="sender sender-k">Kanika</div><span class="bubble bk">"You never fail to make me smile 😊 💕"</span></div>
+            <div class="b-wrap"><div class="sender sender-k">Kanika</div><span class="bubble bk">"Same to you sweetheart ♥️"</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="kd-item" data-aos="fade-up">
+        <div class="kd-dot"></div><div class="kd-line"></div>
+        <div class="kd-card">
+          <div class="kd-top"><div class="kd-date">18 February 2024</div><div class="kd-badge">Priority #1</div></div>
+          <div class="kd-title">"Tu Matter Krne Lagi H" 🥺</div>
+          <div class="bubbles">
+            <div class="b-wrap right"><div class="sender sender-p">Parth</div><span class="bubble bp">"Terko pta h tu matter krne lagi h ab meri life me. Din terse shuru hota h. Terpe khatam hota h."</span></div>
+            <div class="b-wrap"><div class="sender sender-k">Kanika</div><span class="bubble bk">"I want to be in your arms. Please."</span></div>
+            <div class="b-wrap right"><div class="sender sender-p">Parth</div><span class="bubble bp">"Alwayss tere lie available rahunga sabse phlee. Priority list me top pe aagi tu 🥺"</span></div>
+            <div class="b-wrap"><div class="sender sender-k">Kanika</div><span class="bubble bk">"Meri bhii ❤️"</span></div>
+            <div class="b-wrap right"><div class="sender sender-p">Parth</div><span class="bubble bp">"Tu permanent lagri h 👀"</span></div>
+            <div class="b-wrap right"><div class="sender sender-p">Parth</div><span class="bubble bp">"Yess you are my happy placee 🥰"</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="kd-item" data-aos="fade-up">
+        <div class="kd-dot"></div><div class="kd-line"></div>
+        <div class="kd-card">
+          <div class="kd-top"><div class="kd-date">25 February 2024</div><div class="kd-badge">Almost Said It</div></div>
+          <div class="kd-title">What Is Love If Not This?</div>
+          <div class="bubbles">
+            <div class="b-wrap right"><div class="sender sender-p">Parth</div><span class="bubble bp">"I feel great with her. She feel great with me. I admire her for my life. Or kya hota h pyar? Naam ni dia pyar ka but h to pyar hi na 🥺"</span></div>
+            <div class="b-wrap"><div class="sender sender-k">Kanika</div><span class="bubble bk">"Your pure heart attracted me. Your feelings. Your smile."</span></div>
+            <div class="b-wrap right"><div class="sender sender-p">Parth</div><span class="bubble bp">"Mai happy hu tere sath after a very long time"</span></div>
+          </div>
+          <div class="kd-note">Pyar tha. Bas naam nhi tha abhi tak.</div>
+        </div>
+      </div>
+
+      <div class="kd-item" data-aos="fade-up">
+        <div class="kd-dot gold"></div><div class="kd-line"></div>
+        <div class="kd-card gold-card">
+          <div class="kd-top"><div class="kd-date">20 April 2024</div><div class="kd-badge gold-badge">First I Love You 💌</div></div>
+          <div class="kd-title">The First Time Those Three Words Flew</div>
+          <div class="bubbles">
+            <div class="b-wrap right"><div class="sender sender-p">Parth</div><span class="bubble bp">"I lovee you 🥰"</span></div>
+            <div class="b-wrap"><div class="sender sender-k">Kanika</div><span class="bubble bk">"I love you more bby"</span></div>
+          </div>
+          <div class="kd-note gold-note">After months of songs, midnight calls, and almost-said feelings — finally.</div>
+        </div>
+      </div>
+
+      <div class="kd-item" data-aos="fade-up">
+        <div class="kd-dot big"></div><div class="kd-line"></div>
+        <div class="kd-card proposal-card">
+          <div class="kd-top"><div class="kd-date">11 April 2024</div><div class="kd-badge pink-badge">She Proposed First 💍</div></div>
+          <div class="kd-title">Kanika Said Yes — Before He Even Asked ❤️</div>
+          <div class="bubbles">
+            <div class="b-wrap"><div class="sender sender-k">Kanika</div><span class="bubble bk">"Missing you more baby 🥹"</span></div>
+            <div class="b-wrap right"><div class="sender sender-p">Parth</div><span class="bubble bp">"Miss youu soo muchh babyy ❤️"</span></div>
+          </div>
+          <div class="kd-note">She proposed in person on April 11. The morning after — "miss you" on both sides. Some things don't need to be written to be real. 💍</div>
+          <div class="kd-glow">✦ Their Real Anniversary ✦</div>
+        </div>
+      </div>
+
+      <div class="kd-item" data-aos="fade-up">
+        <div class="kd-dot big"></div><div class="kd-line"></div>
+        <div class="kd-card proposal-card">
+          <div class="kd-top"><div class="kd-date">10 May 2024</div><div class="kd-badge pink-badge">He Proposed Back 💌</div></div>
+          <div class="kd-title">Will You Be My Forever?</div>
+          <div class="bubbles">
+            <div class="b-wrap right"><div class="sender sender-p">Parth</div><span class="bubble bp">"Kanika, I remember the day when I started loving you! 8th of Feb 💞 Today I want your answer. Will you be my forever? I promise to love you today, tomorrow, and always 🫶 You are the answer to all my prayers counting from Naina temple to my daily prayer 🫣"</span></div>
+            <div class="b-wrap"><div class="sender sender-k">Kanika</div><span class="bubble bk yes-bubble">"Yesss yessss yessss........."</span></div>
+          </div>
+          <div class="kd-glow">💍 She said yes again 💍</div>
+        </div>
+      </div>
+
+      <div class="kd-item" data-aos="fade-up">
+        <div class="kd-dot big"></div><div class="kd-line"></div>
+        <div class="kd-card proposal-card">
+          <div class="kd-top"><div class="kd-date">28 June 2024</div><div class="kd-badge pink-badge">First Birthday Together 🎂</div></div>
+          <div class="kd-title">Happy Birthday My Beautiful Girlfriend 🌹</div>
+          <div class="bubbles">
+            <div class="b-wrap right"><div class="sender sender-p">Parth</div><span class="bubble bp">"Happy birthday to my beautiful and sexy girlfriend 🌹 You are the best partner in the world. I am very very grateful to have you in my life ❤️❤️ God blessed me with you 😭😭😭 I remember you all day all night ❤️"</span></div>
+            <div class="b-wrap"><div class="sender sender-k">Kanika</div><span class="bubble bk">"I love youuuuu 😭😭🫂♥️"</span></div>
+            <div class="b-wrap right"><div class="sender sender-p">Parth</div><span class="bubble bp">"I loveee youuu the mostttt 🫶🌹"</span></div>
+            <div class="b-wrap"><div class="sender sender-k">Kanika</div><span class="bubble bk">"I really needed you and now I have the person I always imagined. I love you and will always love you in every beautiful way you deserve. ♥️"</span></div>
+            <div class="b-wrap right"><div class="sender sender-p">Parth</div><span class="bubble bp">"The girl who changed my life needs to be treated like a queen"</span></div>
+            <div class="b-wrap"><div class="sender sender-k">Kanika</div><span class="bubble bk">"Tune already bht special kr diya mera pura saal 😭 Meri existence bhi special kr di 😭"</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="kd-item" data-aos="fade-up">
+        <div class="kd-dot gold"></div><div class="kd-line"></div>
+        <div class="kd-card gold-card">
+          <div class="kd-top"><div class="kd-date">1 January 2025</div><div class="kd-badge gold-badge">New Year 🥳</div></div>
+          <div class="kd-title">A Year of Magic — And Many More to Come</div>
+          <div class="bubbles">
+            <div class="b-wrap right"><div class="sender sender-p">Parth</div><span class="bubble bp">"Happy New Year, my baby! A year ago, in Jan I met you, and my life has been nothing short of magical ever since. You are my greatest blessing, my sweetest dream, and my everything. As we step into 2025, I promise to love you even more with every passing day. I pray that I see every year with you till my death 🥹"</span></div>
+            <div class="b-wrap"><div class="sender sender-k">Kanika</div><span class="bubble bk">"Love you more baby ❤️❤️❤️ Happy new year ❤️"</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="kd-item" data-aos="fade-up">
+        <div class="kd-dot"></div><div class="kd-line"></div>
+        <div class="kd-card">
+          <div class="kd-top"><div class="kd-date">30 March 2025</div><div class="kd-badge">His Birthday 🎂</div></div>
+          <div class="kd-title">She Showed Up For Him Too</div>
+          <div class="bubbles">
+            <div class="b-wrap"><div class="sender sender-k">Kanika</div><span class="bubble bk">"Happy birthday my love! On this special day I just want to remind you how incredibly loved and cherished you are. I'm beyond grateful to have you by my side. No matter what, I'll always be here, cheering you on and loving you with all my heart. I love you so so muchhhhh baby 🤍"</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="kd-item" data-aos="fade-up">
+        <div class="kd-dot big"></div><div class="kd-line"></div>
+        <div class="kd-card proposal-card">
+          <div class="kd-top"><div class="kd-date">11 April 2026</div><div class="kd-badge pink-badge">2nd Anniversary 🥂</div></div>
+          <div class="kd-title">Two Years of Choosing Each Other</div>
+          <div class="bubbles">
+            <div class="b-wrap right"><div class="sender sender-p">Parth</div><span class="bubble bp">"Happy 2nd anniversary Madamji ❤️"</span></div>
+            <div class="b-wrap"><div class="sender sender-k">Kanika</div><span class="bubble bk">"Happy anniversary merii jaannn 💕"</span></div>
+            <div class="b-wrap"><div class="sender sender-k">Kanika</div><span class="bubble bk">"I love you more than anything baby"</span></div>
+          </div>
+          <div class="kd-note">Two years since she said yes first. Still going. Still choosing.</div>
+        </div>
+      </div>
+
+      <div class="kd-item" data-aos="fade-up">
+        <div class="kd-dot"></div><div class="kd-line"></div>
+        <div class="kd-card">
+          <div class="kd-top"><div class="kd-date">March 2026</div><div class="kd-badge">She Said It All 💫</div></div>
+          <div class="kd-title">What She Really Thinks of Him</div>
+          <div class="bubbles">
+            <div class="b-wrap"><div class="sender sender-k">Kanika</div><span class="bubble bk">"Tujh jsa ldka mrko janmoon m kbhi nhi milegaaa koi bevkoof hi hogi jo aase pyaare se bf ko cheat kregi 😭♥️"</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="kd-item" data-aos="fade-up">
+        <div class="kd-dot"></div><div class="kd-line"></div>
+        <div class="kd-card">
+          <div class="kd-top"><div class="kd-date">15 May 2026</div><div class="kd-badge">3 AM Feelings 🌙</div></div>
+          <div class="kd-title">"You Complete Me"</div>
+          <div class="bubbles">
+            <div class="b-wrap"><div class="sender sender-k">Kanika</div><span class="bubble bk">"I LOVE YOU"</span></div>
+            <div class="b-wrap right"><div class="sender sender-p">Parth</div><span class="bubble bp">"Love you more"</span></div>
+            <div class="b-wrap"><div class="sender sender-k">Kanika</div><span class="bubble bk">"You complete me. Tere bina toh mne aapni life m aage kuch bhi imagine hi nhi kiya parth. Itne sapne dekh liye mne hamare sath m. Hm thk kr lenge sab, I know 💫"</span></div>
+            <div class="b-wrap right"><div class="sender sender-p">Parth</div><span class="bubble bp">"Nhi jara hu m khi. Lovee youu ❤️"</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TODAY -->
+      <div class="kd-item" data-aos="fade-up">
+        <div class="kd-dot today-dot"></div>
+        <div class="kd-card today-card">
+          <div class="kd-top"><div class="kd-date">28 June 2026</div><div class="kd-badge today-badge">TODAY 🎂✨</div></div>
+          <div class="kd-title">Happy Birthday Kanika 🌹</div>
+          <div class="bubbles">
+            <div class="b-wrap right"><div class="sender sender-p">Parth</div><span class="bubble bp">"I'll choose you in every lifetime. Happy Birthday, my love. 💞"</span></div>
+          </div>
+          <div class="countdown-grid" style="margin-top:16px">
+            <div class="countdown-unit"><div class="countdown-num" id="cnt-years">0</div><div class="countdown-label">Years</div></div>
+            <div class="countdown-unit"><div class="countdown-num" id="cnt-months">0</div><div class="countdown-label">Months</div></div>
+            <div class="countdown-unit"><div class="countdown-num" id="cnt-days">0</div><div class="countdown-label">Days</div></div>
+            <div class="countdown-unit"><div class="countdown-num" id="cnt-hours">0</div><div class="countdown-label">Hours</div></div>
+            <div class="countdown-unit"><div class="countdown-num" id="cnt-mins">0</div><div class="countdown-label">Min</div></div>
+            <div class="countdown-unit"><div class="countdown-num" id="cnt-secs">0</div><div class="countdown-label">Sec</div></div>
+          </div>
+          <div class="kd-note" style="text-align:center;color:#e8789a;border-color:rgba(232,120,154,.2);margin-top:12px">Since she said yes first — 11 April 2024 💍</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- MEMORY WALL POLAROIDS -->
+<section id="polaroid" class="section-pad bg-alt">
+  <div class="container">
+    <div class="section-label" data-aos="fade-up">moments frozen in time</div>
+    <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">Memory Wall 🤍</h2>
+    <!--
+      TO ADD POLAROID PHOTOS:
+      Replace each <div class="placeholder-polaroid">📸</div>
+      with: <img src="kanika1.jpg" alt="caption">
+      inside the polaroid-img div
+    -->
+    <div class="polaroid-grid">
+      <div class="polaroid" data-aos="fade-up" data-aos-delay="0" style="--r:-5deg"><div class="polaroid-img"><div class="placeholder-polaroid">📸</div></div><div class="polaroid-caption">First days</div><div class="polaroid-name">Kanika</div></div>
+      <div class="polaroid" data-aos="fade-up" data-aos-delay="100" style="--r:3deg"><div class="polaroid-img"><div class="placeholder-polaroid">📸</div></div><div class="polaroid-caption">She said yes first 💍</div><div class="polaroid-name">11 Apr 2024</div></div>
+      <div class="polaroid" data-aos="fade-up" data-aos-delay="200" style="--r:-2deg"><div class="polaroid-img"><div class="placeholder-polaroid">📸</div></div><div class="polaroid-caption">Her birthday 🎂</div><div class="polaroid-name">28 Jun 2024</div></div>
+      <div class="polaroid" data-aos="fade-up" data-aos-delay="300" style="--r:5deg"><div class="polaroid-img"><div class="placeholder-polaroid">📸</div></div><div class="polaroid-caption">2nd anniversary 🥂</div><div class="polaroid-name">11 Apr 2026</div></div>
+      <div class="polaroid" data-aos="fade-up" data-aos-delay="400" style="--r:-3deg"><div class="polaroid-img"><div class="placeholder-polaroid">📸</div></div><div class="polaroid-caption">Always my favourite</div><div class="polaroid-name">Kanika</div></div>
+      <div class="polaroid" data-aos="fade-up" data-aos-delay="500" style="--r:2deg"><div class="polaroid-img"><div class="placeholder-polaroid">📸</div></div><div class="polaroid-caption">Today ❤️</div><div class="polaroid-name">28 Jun 2026</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- REASONS I LOVE YOU -->
+<section id="reasons" class="section-pad">
+  <div class="container">
+    <div class="section-label" data-aos="fade-up">from Parth's heart</div>
+    <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">Reasons I Love You 💕</h2>
+    <p class="section-sub" data-aos="fade-up" data-aos-delay="150">30 reasons. All of them true.</p>
+    <div class="reasons-grid" id="reasonsGrid"></div>
+  </div>
+</section>
+
+<!-- FAVOURITE MESSAGES -->
+<section id="messages" class="section-pad bg-alt">
+  <div class="container">
+    <div class="section-label" data-aos="fade-up">words that stayed</div>
+    <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">Favourite Messages 💬</h2>
+    <div class="messages-grid">
+      <div class="msg-card" data-aos="fade-up" data-aos-delay="0"><div class="msg-sender sender-p">Parth 💌</div><div class="msg-text">"You are my greatest blessing, my sweetest dream, and my everything."</div><div class="msg-date">New Year 2025</div></div>
+      <div class="msg-card" data-aos="fade-up" data-aos-delay="100"><div class="msg-sender sender-k">Kanika 💕</div><div class="msg-text">"You don't even imagine how lucky I feel to have you in my life."</div><div class="msg-date">21 Apr 2024</div></div>
+      <div class="msg-card" data-aos="fade-up" data-aos-delay="200"><div class="msg-sender sender-p">Parth 💌</div><div class="msg-text">"Din terse shuru hota h. Terpe khatam hota h."</div><div class="msg-date">18 Feb 2024</div></div>
+      <div class="msg-card" data-aos="fade-up" data-aos-delay="300"><div class="msg-sender sender-k">Kanika 💕</div><div class="msg-text">"Your pure heart attracted me. Your feelings. Your smile."</div><div class="msg-date">25 Feb 2024</div></div>
+      <div class="msg-card" data-aos="fade-up" data-aos-delay="400"><div class="msg-sender sender-p">Parth 💌</div><div class="msg-text">"The girl who changed my life needs to be treated like a queen."</div><div class="msg-date">28 Jun 2024</div></div>
+      <div class="msg-card" data-aos="fade-up" data-aos-delay="500"><div class="msg-sender sender-k">Kanika 💕</div><div class="msg-text">"I really needed you and now I have the person I always imagined. I love you and will always love you in every beautiful way you deserve."</div><div class="msg-date">Birthday 2024</div></div>
+      <div class="msg-card" data-aos="fade-up" data-aos-delay="600"><div class="msg-sender sender-p">Parth 💌</div><div class="msg-text">"One day this distance will be cleared forever and you will be daily in my arms 🥹"</div><div class="msg-date">Jun 2024</div></div>
+      <div class="msg-card" data-aos="fade-up" data-aos-delay="700"><div class="msg-sender sender-k">Kanika 💕</div><div class="msg-text">"You complete me. Tere bina toh mne aapni life m aage kuch bhi imagine hi nhi kiya parth."</div><div class="msg-date">May 2026</div></div>
+      <div class="msg-card" data-aos="fade-up" data-aos-delay="800"><div class="msg-sender sender-p">Parth 💌</div><div class="msg-text">"Yess you are my happy placee 🥰"</div><div class="msg-date">18 Feb 2024</div></div>
+      <div class="msg-card" data-aos="fade-up" data-aos-delay="900"><div class="msg-sender sender-k">Kanika 💕</div><div class="msg-text">"Tujh jsa ldka mrko janmoon m kbhi nhi milegaaa 😭♥️"</div><div class="msg-date">Mar 2026</div></div>
+      <div class="msg-card" data-aos="fade-up" data-aos-delay="1000"><div class="msg-sender sender-p">Parth 💌</div><div class="msg-text">"I will be there for you when the world says you are wrong. You mean something to me ❤️"</div><div class="msg-date">23 Mar 2024</div></div>
+      <div class="msg-card" data-aos="fade-up" data-aos-delay="1100"><div class="msg-sender sender-k">Kanika 💕</div><div class="msg-text">"On this special day I just want to remind you how incredibly loved and cherished you are."</div><div class="msg-date">His Birthday 2025</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- BIRTHDAY WISHES -->
+<section id="wishes" class="section-pad">
+  <div class="container" style="text-align:center">
+    <div class="wishes-center">
+      <div class="wishes-emoji" data-aos="fade-up">🎂</div>
+      <h2 class="wishes-title" data-aos="fade-up" data-aos-delay="100">Happy Birthday,<br>My Beautiful Kanika</h2>
+      <div class="wishes-divider" data-aos="fade-up" data-aos-delay="200">✦ ✦ ✦</div>
+      <p class="wishes-text" data-aos="fade-up" data-aos-delay="300">May this year bring you everything your heart desires.<br>May every morning feel like hope, and every night feel like peace.<br>May you always know how deeply, fiercely, endlessly you are loved.</p>
+      <p class="wishes-text wishes-personal" data-aos="fade-up" data-aos-delay="400">You came into my life and made everything better just by existing.<br>You are my favourite person in every version of every story.<br>And I will keep choosing you — today, tomorrow, and every day after.</p>
+      <div class="wishes-hearts" data-aos="fade-up" data-aos-delay="500">❤️ 🌹 💕 🌸 💖</div>
+    </div>
+  </div>
+</section>
+
+<!-- SURPRISE -->
+<section id="surprise" class="section-pad bg-alt">
+  <div class="container" style="text-align:center;position:relative">
+    <div class="section-label" data-aos="fade-up">just for you</div>
+    <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">A Little Surprise 💖</h2>
+    <div class="surprise-pre" id="surprisePre" data-aos="fade-up" data-aos-delay="200">
+      <p class="surprise-hint">A little something just for you...</p>
+      <button class="surprise-btn" onclick="triggerSurprise()">Click Only If You Love Me ❤️</button>
+    </div>
+    <div class="surprise-reveal" id="surpriseReveal" style="display:none">
+      <div class="surprise-hearts-burst" id="burstContainer"></div>
+      <div class="surprise-quote">"I'll choose you in every lifetime."</div>
+      <div class="surprise-name">— Parth, always 💞</div>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;color:#a88fa8;margin-top:1rem">And in this one, she chose first. 💕</p>
+    </div>
+    <canvas id="confettiCanvas"></canvas>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="footer-inner">
+    <div class="footer-hearts">❤️</div>
+    <p class="footer-made">Made with ❤️ by <strong>Parth</strong></p>
+    <p class="footer-sub">For Kanika — 28 June 2026</p>
+    <div class="footer-hearts">❤️</div>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <div class="lightbox-inner">
+    <img id="lightbox-img" src="" alt="">
+    <div class="lightbox-caption" id="lightbox-caption"></div>
+    <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
