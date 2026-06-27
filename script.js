@@ -15,10 +15,10 @@ const ANNIVERSARY_DATE = new Date('2024-04-11T00:00:00');
 // { src: 'kanika1.jpg', caption: 'My love', date: 'Jan 2024', wide: false }
 // Set wide: true for the first/hero photo to make it span full width
 const PHOTOS = [
-{ src: 'kanika1.jpg', caption: 'My favourite girl', date: 'Jan 2024', wide: true },
-  // { src: 'kanika2.jpg', caption: 'Always smiling', date: 'Apr 2024', wide: false },
-  // { src: 'kanika3.jpg', caption: 'Her birthday 🎂', date: '28 Jun 2024', wide: false },
-  // { src: 'kanika4.jpg', caption: 'Just her', date: '2025', wide: false },
+{ src: 'kanika1.jpg', caption: 'My favourite girl', date: 'Jan 2024', wide: false },
+{ src: 'kanika2.jpg', caption: 'Always smiling', date: 'Apr 2024', wide: false },
+  { src: 'kanika3.jpg', caption: 'Her birthday 🎂', date: '28 Jun 2024', wide: false },
+   { src: 'kanika4.jpg', caption: 'Just her', date: '2025', wide: false },
   // Add as many as you want!
 ];
 
